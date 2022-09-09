@@ -3,7 +3,7 @@ const { ActivityType } = require('discord.js');
 module.exports.run = (client) => {
   client.poru.init(client);
   console.log(
-    `[API] ${client.user.username} is ready with ${client.guilds.cache.size} server`,
+    `[API] ${client.user.username} is ready with ${client.guilds.cache.size} ${client.guild.cache.size > 1 ? "servers" : "server"}`,
   );
 
   setInterval(() => {
